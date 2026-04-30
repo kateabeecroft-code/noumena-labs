@@ -6,7 +6,8 @@
 <title>Noumena Labs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>#about p { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: clamp(1.4rem, 2.5vw, 1.8rem) !important; font-weight: 300 !important; }</style>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,6 +20,7 @@
   --fuchsia: #c8006b;
   --fuchsia-pale: #f9e8f0;
   --serif: 'Outfit', system-ui, sans-serif;
+  --elegant: 'Georgia', 'Times New Roman', serif;
   --mono: 'DM Mono', monospace;
 }
 
@@ -51,8 +53,8 @@ nav {
 
 .nav-logo {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--black);
@@ -127,6 +129,7 @@ nav {
 .hero-link-wrap {
   max-width: 580px;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 .hero-body p + p { margin-top: 1.25rem; }
@@ -170,11 +173,11 @@ section {
 
 .section-label {
   font-family: var(--mono);
-  font-size: 0.68rem;
-  font-weight: 300;
-  letter-spacing: 0.14em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--grey-mid);
+  color: var(--black);
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -206,18 +209,22 @@ section {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--grey-light);
   display: grid;
-  grid-template-columns: 2rem 1fr;
+  grid-template-columns: 1.5rem 1fr;
   gap: 1rem;
-  align-items: baseline;
+  align-items: center;
   font-size: 1rem;
   color: var(--grey-dark);
   line-height: 1.7;
 }
 
 .problem-list li::before {
-  content: '—';
-  color: var(--fuchsia);
-  font-family: var(--mono);
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--fuchsia);
+  display: block;
+  justify-self: center;
 }
 
 .problem-close {
@@ -248,7 +255,7 @@ section {
   margin: 0 auto;
 }
 
-#about .section-label { color: rgba(248,247,245,0.3); }
+#about .section-label { color: rgba(248,247,245,0.9); font-size: 1.1rem; font-weight: 600; }
 #about .section-label::after { background: rgba(248,247,245,0.1); }
 
 #about p {
@@ -499,12 +506,11 @@ footer a:hover { color: var(--fuchsia); }
     Attunement<br>is the moat.
   </h1>
   <div class="fade" style="width: 80px; height: 4px; background: var(--fuchsia); margin-bottom: 3rem;"></div>
+  <div class="hero-body fade">
     <p>The choices being made right now about AI will lock in organisational trajectories that are very hard to escape.</p>
     <p>In the age of hyperintelligence, the scarce thing is not information. It is the capacity to know what matters, to sense what is true, to act with integrity under conditions of radical uncertainty.</p>
   </div>
-  <div class="hero-link-wrap fade">
-    <a href="lightpaper.html" class="hero-link">Read the lightpaper →</a>
-  </div>
+  <a href="lightpaper.html" class="hero-link fade">Read the lightpaper →</a>
 </div>
 </div>
 
@@ -514,7 +520,7 @@ footer a:hover { color: var(--fuchsia); }
   <p class="problem-intro">You're using AI. So is everyone else.</p>
   <p style="font-size:1.05rem; color: var(--grey-dark); max-width: 620px; margin-bottom: 3rem; line-height: 1.8;">Most organisations are in the honeymoon period. Things are moving faster, ideas are easier to articulate, output is up. It feels productive — and often it is. But something else is also happening beneath the surface.</p>
   <ul class="problem-list">
-    <li>Your competitors have the same tools. You're not sure what your edge actually is anymore.</li>
+    <li>Your competitors have the same tools. You're losing sight of your edge.</li>
     <li>Your strategic horizon is collapsing. You don't know what the next 6 months will bring.</li>
     <li>Decisions are getting made faster but feel less grounded. You're not always sure who's actually deciding.</li>
     <li>Your people are producing more, but under pressure the gaps appear. The know-how is quietly eroding.</li>
@@ -562,7 +568,7 @@ footer a:hover { color: var(--fuchsia); }
     </div>
   </div>
   <div class="approach-coda">
-    <span class="coda-statement">Attunement is the moat.</span>
+    <span class="coda-statement">Coherence is still possible.</span>
   </div>
 </section>
 
