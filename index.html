@@ -256,7 +256,7 @@
     }
 
     .service-body {
-      padding-left: 80px;
+      padding-left: calc(80px + 1rem);
     }
 
     .service-desc {
@@ -355,7 +355,7 @@
     /* ── TEAM ── */
     .team-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
@@ -367,7 +367,7 @@
 
     .team-member img {
       width: 100%;
-      aspect-ratio: 4/5;
+      aspect-ratio: 1/1;
       object-fit: cover;
       object-position: center top;
       display: block;
@@ -501,7 +501,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 680px) {
       :root { --gutter: 1.25rem; }
-      .team-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
       .service-header { grid-template-columns: 60px 1fr; }
       .service-body { padding-left: 60px; }
       .step { grid-template-columns: 60px 1fr; }
